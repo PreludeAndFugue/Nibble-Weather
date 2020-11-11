@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Combine
+import SwiftUI
 
 final class MainViewModel: ObservableObject {
     enum State {
@@ -34,13 +34,16 @@ private extension MainViewModel {
     func getCitiesDone(result: API.Result) {
         switch result {
         case .failure(let error):
-            print(error)
             self.error = error
             self.errorMessage = error.localizedDescription
-            self.state = .error
+            withAnimation {
+                self.state = .error
+            }
         case .success(let cities):
             self.cities = cities
-            self.state = .cities
+            withAnimation {
+                self.state = .cities
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ErrorView: View {
     @State var message: String
+    var action: () -> Void
 
     var body: some View {
         VStack(spacing: 20) {
@@ -30,7 +31,7 @@ struct ErrorView: View {
 
 private extension ErrorView {
     func reload() {
-
+        action()
     }
 }
 
@@ -40,7 +41,7 @@ private extension ErrorView {
 #if DEBUG
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(message: "Some error message")
+        ErrorView(message: "Some error message", action: {})
     }
 }
 #endif

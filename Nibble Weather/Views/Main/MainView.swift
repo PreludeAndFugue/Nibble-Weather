@@ -15,13 +15,13 @@ struct MainView: View {
             Group {
                 if viewModel.state == .loading {
                     LoadingView()
-                        .transition(.opacity)
+                        .transition(transition)
                 } else if viewModel.state == .error {
-                    Text(viewModel.errorMessage)
-                        .transition(.opacity)
+                    ErrorView(message: viewModel.errorMessage, action: refresh)
+                        .transition(transition)
                 } else if viewModel.state == .cities {
                     CitiesView(cities: viewModel.cities)
-                        .transition(.opacity)
+                        .transition(transition)
                 }
             }
             .navigationBarTitle("Nibble Weather", displayMode: .large)
@@ -35,6 +35,11 @@ struct MainView: View {
 // MARK: - Private
 
 private extension MainView {
+    var transition: AnyTransition {
+        AnyTransition.opacity
+    }
+
+
     var refreshButton: some View {
         Button(action: refresh) {
             Image(systemName: "arrow.clockwise")
@@ -44,8 +49,12 @@ private extension MainView {
 
 
     func refresh() {
-        viewModel.state = .loading
-        viewModel.getCities()
+        withAnimation {
+            viewModel.state = .loading
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                viewModel.getCities()
+            }
+        }
     }
 }
 
