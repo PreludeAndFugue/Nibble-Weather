@@ -23,8 +23,7 @@ struct CityView: View {
 
                 viewModel.image
                     .resizable()
-                    .aspectRatio(contentMode: .fit
-                    )
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 40, height: 40)
             }
 

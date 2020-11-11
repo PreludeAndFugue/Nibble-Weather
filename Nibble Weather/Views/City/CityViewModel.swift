@@ -14,7 +14,12 @@ final class CityViewModel: ObservableObject {
 
     func getIcon(_ city: City) {
         guard let url = city.url else { return }
-        SDWebImageManager.shared.loadImage(with: url, options: [], progress: nil, completed: getIconDone)
+        SDWebImageManager.shared.loadImage(
+            with: url,
+            options: [],
+            progress: nil,
+            completed: getIconDone
+        )
     }
 }
 
