@@ -3,16 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */; };
-		4E7C4ED4255C658600EAF81F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED3255C658600EAF81F /* ContentView.swift */; };
+		4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED3255C658600EAF81F /* MainView.swift */; };
 		4E7C4ED6255C658700EAF81F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED5255C658700EAF81F /* Assets.xcassets */; };
 		4E7C4ED9255C658700EAF81F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED8255C658700EAF81F /* Preview Assets.xcassets */; };
 		4E7C4EE4255C658700EAF81F /* Nibble_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4EE3255C658700EAF81F /* Nibble_WeatherTests.swift */; };
 		4E7C4EEF255C658700EAF81F /* Nibble_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4EEE255C658700EAF81F /* Nibble_WeatherUITests.swift */; };
+		4E7C4F01255C66D600EAF81F /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F00255C66D600EAF81F /* City.swift */; };
+		4E7C4F0A255C683A00EAF81F /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F09255C683A00EAF81F /* CityTests.swift */; };
+		4E7C4F12255C6F6800EAF81F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F11255C6F6800EAF81F /* API.swift */; };
+		4E7C4F17255C73A900EAF81F /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F16255C73A900EAF81F /* APITests.swift */; };
+		4E7C4F1C255C74F100EAF81F /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F1B255C74F100EAF81F /* Cities.swift */; };
+		4E7C4F25255C79C100EAF81F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F24255C79C100EAF81F /* MainViewModel.swift */; };
+		4E7C4F2A255C7C0C00EAF81F /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F29255C7C0C00EAF81F /* CitiesView.swift */; };
+		4E7C4F2F255C7C5B00EAF81F /* City+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F2E255C7C5B00EAF81F /* City+Preview.swift */; };
+		4E7C4F34255C7D2F00EAF81F /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F33255C7D2F00EAF81F /* CityView.swift */; };
+		4E7C4F39255C7E3B00EAF81F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F38255C7E3B00EAF81F /* LoadingView.swift */; };
+		4E7C4F3E255C7FA400EAF81F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F3D255C7FA400EAF81F /* ErrorView.swift */; };
+		4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F43255C804500EAF81F /* Font+Extension.swift */; };
+		4E7C4F4C255C83FC00EAF81F /* City+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */; };
+		4E7C4F52255C8C2E00EAF81F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E7C4F51255C8C2E00EAF81F /* SDWebImage */; };
+		4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +50,7 @@
 /* Begin PBXFileReference section */
 		4E7C4ECE255C658600EAF81F /* Nibble Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibble Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibble_WeatherApp.swift; sourceTree = "<group>"; };
-		4E7C4ED3255C658600EAF81F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E7C4ED3255C658600EAF81F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4E7C4ED5255C658700EAF81F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E7C4ED8255C658700EAF81F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E7C4EDA255C658700EAF81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +60,20 @@
 		4E7C4EEA255C658700EAF81F /* Nibble WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nibble WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7C4EEE255C658700EAF81F /* Nibble_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibble_WeatherUITests.swift; sourceTree = "<group>"; };
 		4E7C4EF0255C658700EAF81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E7C4F00255C66D600EAF81F /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		4E7C4F09255C683A00EAF81F /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
+		4E7C4F11255C6F6800EAF81F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4E7C4F16255C73A900EAF81F /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		4E7C4F1B255C74F100EAF81F /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		4E7C4F24255C79C100EAF81F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4E7C4F29255C7C0C00EAF81F /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
+		4E7C4F2E255C7C5B00EAF81F /* City+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Preview.swift"; sourceTree = "<group>"; };
+		4E7C4F33255C7D2F00EAF81F /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		4E7C4F38255C7E3B00EAF81F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4E7C4F3D255C7FA400EAF81F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		4E7C4F43255C804500EAF81F /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Extension.swift"; sourceTree = "<group>"; };
+		4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7C4F52255C8C2E00EAF81F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +125,10 @@
 		4E7C4ED0255C658600EAF81F /* Nibble Weather */ = {
 			isa = PBXGroup;
 			children = (
+				4E7C4EFF255C65BD00EAF81F /* Model */,
+				4E7C4F42255C803300EAF81F /* Theme */,
+				4E7C4F20255C795F00EAF81F /* Views */,
 				4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */,
-				4E7C4ED3255C658600EAF81F /* ContentView.swift */,
 				4E7C4ED5255C658700EAF81F /* Assets.xcassets */,
 				4E7C4EDA255C658700EAF81F /* Info.plist */,
 				4E7C4ED7255C658700EAF81F /* Preview Content */,
@@ -108,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7C4ED8255C658700EAF81F /* Preview Assets.xcassets */,
+				4E7C4F2E255C7C5B00EAF81F /* City+Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -115,6 +148,7 @@
 		4E7C4EE2255C658700EAF81F /* Nibble WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				4E7C4F08255C682B00EAF81F /* Model */,
 				4E7C4EE3255C658700EAF81F /* Nibble_WeatherTests.swift */,
 				4E7C4EE5255C658700EAF81F /* Info.plist */,
 			);
@@ -128,6 +162,64 @@
 				4E7C4EF0255C658700EAF81F /* Info.plist */,
 			);
 			path = "Nibble WeatherUITests";
+			sourceTree = "<group>";
+		};
+		4E7C4EFF255C65BD00EAF81F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F00255C66D600EAF81F /* City.swift */,
+				4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */,
+				4E7C4F11255C6F6800EAF81F /* API.swift */,
+				4E7C4F1B255C74F100EAF81F /* Cities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E7C4F08255C682B00EAF81F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F09255C683A00EAF81F /* CityTests.swift */,
+				4E7C4F16255C73A900EAF81F /* APITests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E7C4F20255C795F00EAF81F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F5C255C8F5900EAF81F /* City */,
+				4E7C4F5B255C8F5000EAF81F /* Main */,
+				4E7C4F29255C7C0C00EAF81F /* CitiesView.swift */,
+				4E7C4F38255C7E3B00EAF81F /* LoadingView.swift */,
+				4E7C4F3D255C7FA400EAF81F /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E7C4F42255C803300EAF81F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F43255C804500EAF81F /* Font+Extension.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		4E7C4F5B255C8F5000EAF81F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F24255C79C100EAF81F /* MainViewModel.swift */,
+				4E7C4ED3255C658600EAF81F /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4E7C4F5C255C8F5900EAF81F /* City */ = {
+			isa = PBXGroup;
+			children = (
+				4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */,
+				4E7C4F33255C7D2F00EAF81F /* CityView.swift */,
+			);
+			path = City;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +238,9 @@
 			dependencies = (
 			);
 			name = "Nibble Weather";
+			packageProductDependencies = (
+				4E7C4F51255C8C2E00EAF81F /* SDWebImage */,
+			);
 			productName = "Nibble Weather";
 			productReference = 4E7C4ECE255C658600EAF81F /* Nibble Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 4E7C4EC5255C658600EAF81F;
+			packageReferences = (
+				4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 4E7C4ECF255C658600EAF81F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +357,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E7C4ED4255C658600EAF81F /* ContentView.swift in Sources */,
+				4E7C4F4C255C83FC00EAF81F /* City+Extension.swift in Sources */,
+				4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */,
+				4E7C4F1C255C74F100EAF81F /* Cities.swift in Sources */,
+				4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */,
 				4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */,
+				4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */,
+				4E7C4F39255C7E3B00EAF81F /* LoadingView.swift in Sources */,
+				4E7C4F2F255C7C5B00EAF81F /* City+Preview.swift in Sources */,
+				4E7C4F12255C6F6800EAF81F /* API.swift in Sources */,
+				4E7C4F01255C66D600EAF81F /* City.swift in Sources */,
+				4E7C4F2A255C7C0C00EAF81F /* CitiesView.swift in Sources */,
+				4E7C4F34255C7D2F00EAF81F /* CityView.swift in Sources */,
+				4E7C4F25255C79C100EAF81F /* MainViewModel.swift in Sources */,
+				4E7C4F3E255C7FA400EAF81F /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7C4F0A255C683A00EAF81F /* CityTests.swift in Sources */,
 				4E7C4EE4255C658700EAF81F /* Nibble_WeatherTests.swift in Sources */,
+				4E7C4F17255C73A900EAF81F /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +692,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E7C4F51255C8C2E00EAF81F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E7C4EC6255C658600EAF81F /* Project object */;
 }
