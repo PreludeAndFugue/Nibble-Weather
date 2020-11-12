@@ -19,7 +19,7 @@ struct ErrorView: View {
                 .font(.appFont(size: 17))
             Button(action: reload) {
                 Text("Reload")
-                    .foregroundColor(.purple)
+                    .foregroundColor(.blue)
                     .font(.appFont(size: 17, weight: .medium))
             }
         }

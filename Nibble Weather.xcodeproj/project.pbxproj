@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0EA559255CBB100070F87A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EA558255CBB100070F87A /* Color+Extension.swift */; };
 		4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */; };
 		4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED3255C658600EAF81F /* MainView.swift */; };
 		4E7C4ED6255C658700EAF81F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED5255C658700EAF81F /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E0EA558255CBB100070F87A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4E7C4ECE255C658600EAF81F /* Nibble Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibble Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibble_WeatherApp.swift; sourceTree = "<group>"; };
 		4E7C4ED3255C658600EAF81F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7C4F43255C804500EAF81F /* Font+Extension.swift */,
+				4E0EA558255CBB100070F87A /* Color+Extension.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E7C4F4C255C83FC00EAF81F /* City+Extension.swift in Sources */,
+				4E0EA559255CBB100070F87A /* Color+Extension.swift in Sources */,
 				4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */,
 				4E7C4F1C255C74F100EAF81F /* Cities.swift in Sources */,
 				4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */,

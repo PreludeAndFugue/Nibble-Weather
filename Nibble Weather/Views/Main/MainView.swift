@@ -43,7 +43,7 @@ private extension MainView {
     var refreshButton: some View {
         Button(action: refresh) {
             Image(systemName: "arrow.clockwise")
-                .foregroundColor(.purple)
+                .foregroundColor(.blue)
         }
     }
 
