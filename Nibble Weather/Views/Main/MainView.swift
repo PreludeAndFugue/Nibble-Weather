@@ -10,6 +10,10 @@ import SwiftUI
 struct MainView: View {
     @StateObject var viewModel = MainViewModel()
 
+    init() {
+        Theme.apply()
+    }
+
     var body: some View {
         NavigationView {
             Group {
