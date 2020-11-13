@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CitiesView: View {
     @Environment(\.horizontalSizeClass) var hSizeClass
-    @State var cities: [City]
+    @EnvironmentObject var db: Database
 
     var body: some View {
         GeometryReader { geometryProxy in
             ScrollView {
                 LazyVGrid(columns: makeColumns(geometryProxy), spacing: 20) {
-                    ForEach(cities) { city in
+                    ForEach(db.cities) { city in
                         CityView(city: city)
                             .overlay(border)
                     }
@@ -68,9 +68,11 @@ private extension CitiesView {
 
 #if DEBUG
 struct CitiesView_Previews: PreviewProvider {
+    static let db = Database()
     static var previews: some View {
         NavigationView {
-            CitiesView(cities: [.city1, .city1])
+            CitiesView()
+                .environmentObject(db)
         }
     }
 }

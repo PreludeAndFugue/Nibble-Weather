@@ -15,32 +15,18 @@ final class MainViewModel: ObservableObject {
         case cities
     }
 
-
-    private let api = API()
-
     @Published var state = State.loading
-    var error: Error?
     var errorMessage = ""
-    var cities: [City] = []
-
-    
-    func getCities() {
-        api.get(completion: getCitiesDone)
-    }
-}
 
 
-private extension MainViewModel {
-    func getCitiesDone(result: API.Result) {
+    func getCitiesDone(result: Database.Result) {
         switch result {
         case .failure(let error):
-            self.error = error
             self.errorMessage = error.localizedDescription
             withAnimation {
                 self.state = .error
             }
-        case .success(let cities):
-            self.cities = cities
+        case .success:
             withAnimation {
                 self.state = .cities
             }

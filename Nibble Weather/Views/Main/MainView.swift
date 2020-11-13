@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var db: Database
     @StateObject var viewModel = MainViewModel()
+
 
     init() {
         Theme.apply()
@@ -24,15 +26,15 @@ struct MainView: View {
                     ErrorView(message: viewModel.errorMessage, action: refresh)
                         .transition(transition)
                 } else if viewModel.state == .cities {
-                    CitiesView(cities: viewModel.cities)
+                    CitiesView()
                         .transition(transition)
                 }
             }
             .navigationBarTitle("Nibble Weather", displayMode: .large)
-            .navigationBarItems(trailing: refreshButton)
+            .navigationBarItems(leading: refreshButton, trailing: sortButton)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear(perform: viewModel.getCities)
+        .onAppear(perform: onAppear)
     }
 }
 
@@ -53,13 +55,31 @@ private extension MainView {
     }
 
 
+    var sortButton: some View {
+        Button(action: sort) {
+            Image(systemName: "arrow.up.arrow.down")
+                .foregroundColor(.blue)
+        }
+    }
+
+
+    func onAppear() {
+        db.getCities(completion: viewModel.getCitiesDone)
+    }
+
+
     func refresh() {
         withAnimation {
             viewModel.state = .loading
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                viewModel.getCities()
+                db.getCities(completion: viewModel.getCitiesDone)
             }
         }
+    }
+
+
+    func sort() {
+
     }
 }
 

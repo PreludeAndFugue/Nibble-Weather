@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Nibble_WeatherApp: App {
+    let db = Database()
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(db)
         }
     }
 }

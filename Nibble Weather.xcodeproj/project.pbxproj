@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E0EA559255CBB100070F87A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EA558255CBB100070F87A /* Color+Extension.swift */; };
 		4E0EA55E255CBC6E0070F87A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EA55D255CBC6E0070F87A /* Theme.swift */; };
+		4E4991FA255F4E0B00EF11F0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4991F9255F4E0B00EF11F0 /* Database.swift */; };
 		4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */; };
 		4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED3255C658600EAF81F /* MainView.swift */; };
 		4E7C4ED6255C658700EAF81F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C4ED5255C658700EAF81F /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		4E0EA558255CBB100070F87A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4E0EA55D255CBC6E0070F87A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4E4991F9255F4E0B00EF11F0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4E7C4ECE255C658600EAF81F /* Nibble Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibble Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7C4ED1255C658600EAF81F /* Nibble_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibble_WeatherApp.swift; sourceTree = "<group>"; };
 		4E7C4ED3255C658600EAF81F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */,
 				4E7C4F11255C6F6800EAF81F /* API.swift */,
 				4E7C4F1B255C74F100EAF81F /* Cities.swift */,
+				4E4991F9255F4E0B00EF11F0 /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				4E7C4F1C255C74F100EAF81F /* Cities.swift in Sources */,
 				4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */,
 				4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */,
+				4E4991FA255F4E0B00EF11F0 /* Database.swift in Sources */,
 				4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */,
 				4E7C4F39255C7E3B00EAF81F /* LoadingView.swift in Sources */,
 				4E7C4F2F255C7C5B00EAF81F /* City+Preview.swift in Sources */,
