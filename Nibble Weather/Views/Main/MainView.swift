@@ -31,6 +31,7 @@ struct MainView: View {
             .navigationBarTitle("Nibble Weather", displayMode: .large)
             .navigationBarItems(trailing: refreshButton)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear(perform: viewModel.getCities)
     }
 }

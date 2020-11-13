@@ -77,6 +77,7 @@ struct CityView: View {
                 }
             }
         }
+        .padding()
         .onAppear {
             viewModel.getIcon(city)
         }
