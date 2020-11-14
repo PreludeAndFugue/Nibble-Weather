@@ -16,6 +16,13 @@ private var n0: NumberFormatter = {
 }()
 
 
+private var n1: NumberFormatter = {
+    let n = NumberFormatter()
+    n.maximumFractionDigits = 1
+    return n
+}()
+
+
 private var p: NumberFormatter = {
     let p = NumberFormatter()
     p.maximumFractionDigits = 0
@@ -82,6 +89,11 @@ extension City {
     }
 
 
+    var weatherDescription: String {
+        weather.first?.description ?? "Unknown"
+    }
+
+
     var humidity: String {
         let value = Double(main.humidity) / 100.0
         let n = NSNumber(value: value)
@@ -108,6 +120,46 @@ extension City {
         f.allowedUnits = [.hour, .minute]
         f.allowsFractionalUnits = true
         return f.string(from: Double(dayLength)) ?? "?"
+    }
+
+
+    var cloudsString: String {
+        let n = NSNumber(value: Double(clouds.all) / 100)
+        return p.string(from: n) ?? "?"
+    }
+
+
+    var windSpeed: String {
+        let n = NSNumber(value: wind.speed)
+        return n1.string(from: n) ?? "?"
+    }
+
+
+    var windDirection: String {
+        let n = NSNumber(value: wind.degrees)
+        return n0.string(from: n) ?? "?"
+    }
+
+
+    var windDirectionArrow: Image {
+        switch wind.degrees {
+        case 22..<67:
+            return Image(systemName: "arrow.down.left")
+        case 66..<112:
+            return Image(systemName: "arrow.left")
+        case 112..<157:
+            return Image(systemName: "arrow.up.left")
+        case 157..<202:
+            return Image(systemName: "arrow.up")
+        case 202..<247:
+            return Image(systemName: "arrow.up.right")
+        case 247..<292:
+            return Image(systemName: "arrow.right")
+        case 292..<337:
+            return Image(systemName: "arrow.down.right")
+        default:
+            return Image(systemName: "arrow.down")
+        }
     }
 }
 

@@ -36,11 +36,19 @@ struct CityView: View {
                         .font(.appFont(size: 15))
                     Text(city.temp)
                         .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
 
                     Text("DAY")
                         .foregroundColor(.secondary)
                         .font(.appFont(size: 15))
                     Text(city.dayLengthText)
+                        .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
+
+                    Text("CLOUDS")
+                        .foregroundColor(.secondary)
+                        .font(.appFont(size: 15))
+                    Text(city.cloudsString)
                         .font(.appFont(size: 24))
                 }
 
@@ -52,11 +60,19 @@ struct CityView: View {
                         .font(.appFont(size: 15))
                     Text(city.feelsLike)
                         .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
 
                     Text("SUNRISE")
                         .foregroundColor(.secondary)
                         .font(.appFont(size: 15))
                     Text(city.sunrise)
+                        .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
+
+                    Text("WIND")
+                        .foregroundColor(.secondary)
+                        .font(.appFont(size: 15))
+                    Text(city.windSpeed)
                         .font(.appFont(size: 24))
                 }
 
@@ -68,11 +84,20 @@ struct CityView: View {
                         .font(.appFont(size: 15))
                     Text(city.humidity)
                         .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
 
                     Text("SUNSET")
                         .foregroundColor(.secondary)
                         .font(.appFont(size: 15))
                     Text(city.sunset)
+                        .font(.appFont(size: 24))
+                        .padding(.bottom, 4)
+
+                    Text("DIRECTION")
+                        .foregroundColor(.secondary)
+                        .font(.appFont(size: 15))
+//                    Text(city.windDirection)
+                    city.windDirectionArrow
                         .font(.appFont(size: 24))
                 }
             }
