@@ -36,6 +36,7 @@ struct MainView: View {
                 trailing: MainMenuView(action: sort)
             )
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear(perform: onAppear)
     }
 }
