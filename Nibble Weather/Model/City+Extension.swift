@@ -96,4 +96,9 @@ extension City {
         let path = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         return URL(string: path)!
     }
+
+
+    var dayLength: Int {
+        sys.sunset - sys.sunrise
+    }
 }

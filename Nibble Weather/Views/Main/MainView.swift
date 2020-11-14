@@ -52,14 +52,44 @@ private extension MainView {
             Image(systemName: "arrow.clockwise")
                 .foregroundColor(.blue)
         }
+        .padding()
     }
 
 
     var sortButton: some View {
-        Button(action: sort) {
-            Image(systemName: "arrow.up.arrow.down")
-                .foregroundColor(.blue)
+        Button(action: {}) {
+            Menu(content: makeMenu, label: makeMenuLabel)
         }
+    }
+
+
+    func makeMenu() -> some View {
+        Group {
+            Button(action: sort(by: .warmest)) {
+                Text("Warmest")
+            }
+            Button(action: sort(by: .coldest)) {
+                Text("Coldest")
+            }
+            Button(action: sort(by: .mostSunny)) {
+                Text("Most sunny")
+            }
+            Button(action: sort(by: .mostCloudy)) {
+                Text("Most cloudy")
+            }
+            Button(action: sort(by: .longestDay)) {
+                Text("Longest day")
+            }
+            Button(action: sort(by: .shortestDay)) {
+                Text("Shortest day")
+            }
+        }
+    }
+
+
+    func makeMenuLabel() -> some View {
+        Image(systemName: "arrow.up.arrow.down")
+            .foregroundColor(.blue)
     }
 
 
@@ -78,8 +108,8 @@ private extension MainView {
     }
 
 
-    func sort() {
-
+    func sort(by sort: Database.Sort) -> () -> () {
+        { withAnimation { db.sort(by: sort) } }
     }
 }
 
