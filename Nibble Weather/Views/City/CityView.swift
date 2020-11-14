@@ -30,73 +30,30 @@ struct CityView: View {
             }
 
             HStack {
-                VStack() {
-                    Text("TEMP")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.temp)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
-
-                    Text("DAY")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.dayLengthText)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
-
-                    Text("CLOUDS")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.cloudsString)
-                        .font(.appFont(size: 24))
-                }
-
+                InfoView(title: "TEMP", description: city.temp)
                 Spacer()
-
-                VStack {
-                    Text("FEELS LIKE")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.feelsLike)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
-
-                    Text("SUNRISE")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.sunrise)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
-
-                    Text("WIND")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.windSpeed)
-                        .font(.appFont(size: 24))
-                }
-
+                InfoView(title: "FEELS LIKE", description: city.feelsLike)
                 Spacer()
+                InfoView(title: "HUMIDITY", description: city.humidity)
+            }
 
-                VStack {
-                    Text("HUMIDITY")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.humidity)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
+            HStack {
+                InfoView(title: "DAY", description: city.dayLengthText)
+                Spacer()
+                InfoView(title: "SUNRISE", description: city.sunrise)
+                Spacer()
+                InfoView(title: "SUNSET", description: city.sunset)
+            }
 
-                    Text("SUNSET")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    Text(city.sunset)
-                        .font(.appFont(size: 24))
-                        .padding(.bottom, 4)
-
+            HStack {
+                InfoView(title: "CLOUDS", description: city.cloudsString)
+                Spacer()
+                InfoView(title: "WIND", description: city.windSpeedGeneral)
+                Spacer()
+                VStack(alignment: .leading) {
                     Text("DIRECTION")
                         .foregroundColor(.secondary)
                         .font(.appFont(size: 15))
-//                    Text(city.windDirection)
                     city.windDirectionArrow
                         .font(.appFont(size: 24))
                 }

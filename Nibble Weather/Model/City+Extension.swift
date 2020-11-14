@@ -31,10 +31,20 @@ private var p: NumberFormatter = {
 }()
 
 
-private var t1: MeasurementFormatter = {
+private var t0: MeasurementFormatter = {
     let m = MeasurementFormatter()
     m.numberFormatter = n0
     m.unitStyle = .short
+    m.unitOptions = .providedUnit
+    return m
+}()
+
+
+private var t1: MeasurementFormatter = {
+    let m = MeasurementFormatter()
+    m.numberFormatter = n1
+    m.unitStyle = .short
+    m.unitOptions = .providedUnit
     return m
 }()
 
@@ -73,14 +83,14 @@ extension City {
     var temp: String {
         var measurement = Measurement(value: main.temp, unit: UnitTemperature.kelvin)
         measurement.convert(to: .celsius)
-        return t1.string(from: measurement)
+        return t0.string(from: measurement)
     }
 
 
     var feelsLike: String {
         var measurement = Measurement(value: main.feelsLike, unit: UnitTemperature.kelvin)
         measurement.convert(to: .celsius)
-        return t1.string(from: measurement)
+        return t0.string(from: measurement)
     }
 
 
@@ -132,6 +142,13 @@ extension City {
     var windSpeed: String {
         let n = NSNumber(value: wind.speed)
         return n1.string(from: n) ?? "?"
+    }
+
+
+    var windSpeedGeneral: String {
+        var measurement = Measurement(value: wind.speed, unit: UnitSpeed.metersPerSecond)
+        measurement.convert(to: .kilometersPerHour)
+        return t1.string(from: measurement)
     }
 
 
