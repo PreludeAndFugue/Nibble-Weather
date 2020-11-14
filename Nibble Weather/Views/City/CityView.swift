@@ -13,20 +13,25 @@ struct CityView: View {
 
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
             Text(city.name)
                 .font(.appFont(size: 34))
 
             HStack {
-                Text(city.weatherText)
-                    .font(.appFont(size: 24))
-
                 viewModel.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
+                    .frame(width: 45, height: 45)
                     .background(Color.lightBlue)
                     .cornerRadius(8)
+
+                VStack(alignment: .leading) {
+                    Text(city.weatherText)
+                        .font(.appFont(size: 24))
+                    Text(city.weatherDescription)
+                        .foregroundColor(.secondary)
+                        .font(.appFont(size: 17))
+                }
             }
 
             LazyVGrid(columns: viewModel.columns, alignment: .leading, spacing: 10) {
