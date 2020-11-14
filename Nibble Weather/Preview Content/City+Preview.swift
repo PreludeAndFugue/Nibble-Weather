@@ -21,7 +21,7 @@ extension City {
         main: Main(temp: 280, feelsLike: 281, pressure: 1001, humidity: 81),
         wind: Wind(speed: 3, degrees: 320),
         clouds: Clouds(all: 90),
-        sys: Sys(timezone: 0, sunrise: 1656456456, sunset: 1456456456)
+        sys: Sys(timezone: 0, sunrise: 1656453456, sunset: 1656460000)
     )
 }
 #endif
