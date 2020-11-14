@@ -16,7 +16,7 @@ struct InfoView: View {
         VStack(alignment: .leading) {
             Text(title)
                 .foregroundColor(.secondary)
-                .font(.appFont(size: 15))
+                .font(.appFont(size: 13))
             Text(description)
                 .font(.appFont(size: 24))
         }
