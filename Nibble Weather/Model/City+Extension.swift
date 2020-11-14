@@ -43,17 +43,15 @@ private var d: DateFormatter = {
 extension City {
     var sunrise: String {
         let tz = TimeZone(secondsFromGMT: sys.timezone)
-        let date = Date(timeIntervalSince1970: Double(sys.sunrise))
         d.timeZone = tz
-        return d.string(from: date)
+        return d.string(from: _sunrise)
     }
 
 
     var sunset: String {
         let tz = TimeZone(secondsFromGMT: sys.timezone)
-        let date = Date(timeIntervalSince1970: Double(sys.sunset))
         d.timeZone = tz
-        return d.string(from: date)
+        return d.string(from: _sunset)
     }
 
 
@@ -100,5 +98,29 @@ extension City {
 
     var dayLength: Int {
         sys.sunset - sys.sunrise
+    }
+
+
+    var dayLengthText: String {
+        var components = DateComponents()
+        components.second = dayLength
+        let f = DateComponentsFormatter()
+        f.allowedUnits = [.hour, .minute]
+        f.allowsFractionalUnits = true
+        return f.string(from: Double(dayLength)) ?? "?"
+    }
+}
+
+
+// MARK: - Private
+
+private extension City {
+    var _sunrise: Date {
+        return Date(timeIntervalSince1970: Double(sys.sunrise))
+    }
+
+
+    var _sunset: Date {
+        return Date(timeIntervalSince1970: Double(sys.sunset))
     }
 }

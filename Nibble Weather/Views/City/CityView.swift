@@ -37,10 +37,10 @@ struct CityView: View {
                     Text(city.temp)
                         .font(.appFont(size: 24))
 
-                    Text("NOW")
+                    Text("DAY")
                         .foregroundColor(.secondary)
                         .font(.appFont(size: 15))
-                    Text(city.currentTime)
+                    Text(city.dayLengthText)
                         .font(.appFont(size: 24))
                 }
 
