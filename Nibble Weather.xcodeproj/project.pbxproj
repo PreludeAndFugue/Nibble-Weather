@@ -32,6 +32,7 @@
 		4E7C4F52255C8C2E00EAF81F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E7C4F51255C8C2E00EAF81F /* SDWebImage */; };
 		4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */; };
 		4EE692B32560191A00BC54C0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B22560191A00BC54C0 /* Array+Extension.swift */; };
+		4EE692B8256029A100BC54C0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B7256029A100BC54C0 /* MainMenuView.swift */; };
 		4EEA7721255E109C00829F31 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA7720255E109C00829F31 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Extension.swift"; sourceTree = "<group>"; };
 		4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		4EE692B22560191A00BC54C0 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		4EE692B7256029A100BC54C0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		4EEA7720255E109C00829F31 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 			children = (
 				4E7C4F24255C79C100EAF81F /* MainViewModel.swift */,
 				4E7C4ED3255C658600EAF81F /* MainView.swift */,
+				4EE692B7256029A100BC54C0 /* MainMenuView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */,
 				4E7C4F39255C7E3B00EAF81F /* LoadingView.swift in Sources */,
 				4E7C4F2F255C7C5B00EAF81F /* City+Preview.swift in Sources */,
+				4EE692B8256029A100BC54C0 /* MainMenuView.swift in Sources */,
 				4E0EA55E255CBC6E0070F87A /* Theme.swift in Sources */,
 				4EE692B32560191A00BC54C0 /* Array+Extension.swift in Sources */,
 				4EEA7721255E109C00829F31 /* UIFont+Extension.swift in Sources */,

@@ -9,4 +9,6 @@ import SwiftUI
 
 extension Color {
     static let lightBlue = Color("LightBlue")
+    static let coldHighlight = Color("ColdHighlight")
+    static let warmHighlight = Color("WarmHighlight")
 }

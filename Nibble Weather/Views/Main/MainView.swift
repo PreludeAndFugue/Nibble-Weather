@@ -31,9 +31,11 @@ struct MainView: View {
                 }
             }
             .navigationBarTitle("Nibble Weather", displayMode: .large)
-            .navigationBarItems(leading: refreshButton, trailing: sortButton)
+            .navigationBarItems(
+                leading: refreshButton,
+                trailing: MainMenuView(action: sort)
+            )
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear(perform: onAppear)
     }
 }
@@ -56,43 +58,6 @@ private extension MainView {
     }
 
 
-    var sortButton: some View {
-        Button(action: {}) {
-            Menu(content: makeMenu, label: makeMenuLabel)
-        }
-    }
-
-
-    func makeMenu() -> some View {
-        Group {
-            Button(action: sort(by: .warmest)) {
-                Text("Warmest")
-            }
-            Button(action: sort(by: .coldest)) {
-                Text("Coldest")
-            }
-            Button(action: sort(by: .mostSunny)) {
-                Text("Most sunny")
-            }
-            Button(action: sort(by: .mostCloudy)) {
-                Text("Most cloudy")
-            }
-            Button(action: sort(by: .longestDay)) {
-                Text("Longest day")
-            }
-            Button(action: sort(by: .shortestDay)) {
-                Text("Shortest day")
-            }
-        }
-    }
-
-
-    func makeMenuLabel() -> some View {
-        Image(systemName: "arrow.up.arrow.down")
-            .foregroundColor(.blue)
-    }
-
-
     func onAppear() {
         db.getCities(completion: viewModel.getCitiesDone)
     }
@@ -108,8 +73,10 @@ private extension MainView {
     }
 
 
-    func sort(by sort: Database.Sort) -> () -> () {
-        { withAnimation { db.sort(by: sort) } }
+    func sort(by sort: Database.Sort) {
+        withAnimation {
+            db.sort(by: sort)
+        }
     }
 }
 
