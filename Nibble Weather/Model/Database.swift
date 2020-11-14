@@ -18,6 +18,8 @@ final class Database: ObservableObject {
         case mostCloudy
         case longestDay
         case shortestDay
+        case mostWindy
+        case leastWindy
     }
 
     private let api = API()
@@ -46,6 +48,10 @@ final class Database: ObservableObject {
             cities = cities.sorted(keyPath: \.dayLength, op: >)
         case .shortestDay:
             cities = cities.sorted(keyPath: \.dayLength, op: <)
+        case .mostWindy:
+            cities = cities.sorted(keyPath: \.wind.speed, op: >)
+        case .leastWindy:
+            cities = cities.sorted(keyPath: \.wind.speed, op: <)
         }
     }
 }

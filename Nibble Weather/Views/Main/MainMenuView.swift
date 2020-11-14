@@ -47,6 +47,14 @@ struct MainMenuView: View {
                 Image(systemName: "hare")
                 Text("Shortest day")
             }
+            Button(action: sort(by: .mostWindy)) {
+                Image(systemName: "tornado")
+                Text("Most windy")
+            }
+            Button(action: sort(by: .leastWindy)) {
+                Image(systemName: "wind")
+                Text("Least windy")
+            }
         }
     }
 
