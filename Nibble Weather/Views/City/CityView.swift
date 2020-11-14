@@ -14,8 +14,13 @@ struct CityView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(city.name)
-                .font(.appFont(size: 34))
+            HStack(alignment: .firstTextBaseline) {
+                Text(city.name)
+                    .font(.appFont(size: 34))
+                Spacer()
+                Text(city.currentTime)
+                    .font(.appFont(size: 17))
+            }
 
             HStack {
                 viewModel.image
