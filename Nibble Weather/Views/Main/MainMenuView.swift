@@ -20,27 +20,22 @@ struct MainMenuView: View {
         Group {
             Button(action: sort(by: .warmest)) {
                 Image(systemName: "thermometer.sun")
-                    .foregroundColor(.warmHighlight)
                 Text("Warm")
             }
             Button(action: sort(by: .coldest)) {
                 Image(systemName: "thermometer.snowflake")
-                    .foregroundColor(.coldHighlight)
                 Text("Cold")
             }
             Button(action: sort(by: .mostSunny)) {
                 Image(systemName: "sun.max")
-                    .foregroundColor(.warmHighlight)
                 Text("Sun")
             }
             Button(action: sort(by: .mostCloudy)) {
                 Image(systemName: "cloud")
-                    .foregroundColor(.coldHighlight)
                 Text("Cloud")
             }
             Button(action: sort(by: .longestDay)) {
                 Image(systemName: "tortoise")
-                    .foregroundColor(.green)
                 Text("Day")
             }
             Button(action: sort(by: .shortestDay)) {
