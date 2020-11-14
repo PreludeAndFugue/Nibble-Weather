@@ -29,33 +29,9 @@ struct CityView: View {
                     .cornerRadius(8)
             }
 
-            HStack {
-                InfoView(title: "TEMP", description: city.temp)
-                Spacer()
-                InfoView(title: "FEELS LIKE", description: city.feelsLike)
-                Spacer()
-                InfoView(title: "HUMIDITY", description: city.humidity)
-            }
-
-            HStack {
-                InfoView(title: "DAY", description: city.dayLengthText)
-                Spacer()
-                InfoView(title: "SUNRISE", description: city.sunrise)
-                Spacer()
-                InfoView(title: "SUNSET", description: city.sunset)
-            }
-
-            HStack {
-                InfoView(title: "CLOUDS", description: city.cloudsString)
-                Spacer()
-                InfoView(title: "WIND", description: city.windSpeedGeneral)
-                Spacer()
-                VStack(alignment: .leading) {
-                    Text("DIRECTION")
-                        .foregroundColor(.secondary)
-                        .font(.appFont(size: 15))
-                    city.windDirectionArrow
-                        .font(.appFont(size: 24))
+            LazyVGrid(columns: viewModel.columns, alignment: .leading, spacing: 10) {
+                ForEach(viewModel.items(for: city), id: \.0) {
+                    InfoView(title: $0.0, description: $0.1)
                 }
             }
         }
