@@ -21,39 +21,39 @@ struct MainMenuView: View {
             Button(action: sort(by: .warmest)) {
                 Image(systemName: "thermometer.sun")
                     .foregroundColor(.warmHighlight)
-                Text("Warmest")
+                Text("Warm")
             }
             Button(action: sort(by: .coldest)) {
                 Image(systemName: "thermometer.snowflake")
                     .foregroundColor(.coldHighlight)
-                Text("Coldest")
+                Text("Cold")
             }
             Button(action: sort(by: .mostSunny)) {
                 Image(systemName: "sun.max")
                     .foregroundColor(.warmHighlight)
-                Text("Most sunny")
+                Text("Sun")
             }
             Button(action: sort(by: .mostCloudy)) {
                 Image(systemName: "cloud")
                     .foregroundColor(.coldHighlight)
-                Text("Most cloudy")
+                Text("Cloud")
             }
             Button(action: sort(by: .longestDay)) {
                 Image(systemName: "tortoise")
                     .foregroundColor(.green)
-                Text("Longest day")
+                Text("Day")
             }
             Button(action: sort(by: .shortestDay)) {
                 Image(systemName: "hare")
-                Text("Shortest day")
+                Text("Night")
             }
             Button(action: sort(by: .mostWindy)) {
                 Image(systemName: "tornado")
-                Text("Most windy")
+                Text("Wind")
             }
             Button(action: sort(by: .leastWindy)) {
                 Image(systemName: "wind")
-                Text("Least windy")
+                Text("Calm")
             }
         }
     }
