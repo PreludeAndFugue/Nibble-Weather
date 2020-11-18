@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CityView: View {
     @State var city: City
@@ -23,8 +24,11 @@ struct CityView: View {
             }
 
             HStack {
-                viewModel.image
+                WebImage(url: city.url)
                     .resizable()
+                    .placeholder {
+                        Text("?")
+                    }
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 45, height: 45)
                     .background(Color.lightBlue)
@@ -46,9 +50,6 @@ struct CityView: View {
             }
         }
         .padding()
-        .onAppear {
-            viewModel.getIcon(city)
-        }
     }
 }
 

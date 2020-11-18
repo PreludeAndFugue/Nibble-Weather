@@ -29,8 +29,8 @@
 		4E7C4F3E255C7FA400EAF81F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F3D255C7FA400EAF81F /* ErrorView.swift */; };
 		4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F43255C804500EAF81F /* Font+Extension.swift */; };
 		4E7C4F4C255C83FC00EAF81F /* City+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */; };
-		4E7C4F52255C8C2E00EAF81F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E7C4F51255C8C2E00EAF81F /* SDWebImage */; };
 		4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */; };
+		4E867DF4256499EB00444EA4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4E867DF3256499EB00444EA4 /* SDWebImageSwiftUI */; };
 		4EE692B32560191A00BC54C0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B22560191A00BC54C0 /* Array+Extension.swift */; };
 		4EE692B8256029A100BC54C0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B7256029A100BC54C0 /* MainMenuView.swift */; };
 		4EE692BD256034B400BC54C0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692BC256034B400BC54C0 /* InfoView.swift */; };
@@ -84,6 +84,7 @@
 		4E7C4F43255C804500EAF81F /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Extension.swift"; sourceTree = "<group>"; };
 		4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		4E867DEB256498A400444EA4 /* Nibble Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nibble Weather.entitlements"; sourceTree = "<group>"; };
 		4EE692B22560191A00BC54C0 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		4EE692B7256029A100BC54C0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		4EE692BC256034B400BC54C0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -95,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E7C4F52255C8C2E00EAF81F /* SDWebImage in Frameworks */,
+				4E867DF4256499EB00444EA4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +140,7 @@
 		4E7C4ED0255C658600EAF81F /* Nibble Weather */ = {
 			isa = PBXGroup;
 			children = (
+				4E867DEB256498A400444EA4 /* Nibble Weather.entitlements */,
 				4EE692B12560190A00BC54C0 /* Extensions */,
 				4E7C4EFF255C65BD00EAF81F /* Model */,
 				4E7C4F42255C803300EAF81F /* Theme */,
@@ -268,7 +270,7 @@
 			);
 			name = "Nibble Weather";
 			packageProductDependencies = (
-				4E7C4F51255C8C2E00EAF81F /* SDWebImage */,
+				4E867DF3256499EB00444EA4 /* SDWebImageSwiftUI */,
 			);
 			productName = "Nibble Weather";
 			productReference = 4E7C4ECE255C658600EAF81F /* Nibble Weather.app */;
@@ -342,7 +344,7 @@
 			);
 			mainGroup = 4E7C4EC5255C658600EAF81F;
 			packageReferences = (
-				4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				4E867DF2256499EB00444EA4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 4E7C4ECF255C658600EAF81F /* Products */;
 			projectDirPath = "";
@@ -565,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Nibble Weather/Nibble Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Nibble Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = LE7C443W53;
@@ -577,6 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nibbleapps.Nibble-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,6 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Nibble Weather/Nibble Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Nibble Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = LE7C443W53;
@@ -599,6 +604,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nibbleapps.Nibble-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -730,21 +736,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		4E867DF2256499EB00444EA4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.4;
+				minimumVersion = 1.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4E7C4F51255C8C2E00EAF81F /* SDWebImage */ = {
+		4E867DF3256499EB00444EA4 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E7C4F50255C8C2E00EAF81F /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
+			package = 4E867DF2256499EB00444EA4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
