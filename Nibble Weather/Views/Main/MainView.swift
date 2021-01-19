@@ -21,19 +21,17 @@ struct MainView: View {
             Group {
                 if viewModel.state == .loading {
                     LoadingView()
-                        .transition(transition)
                 } else if viewModel.state == .error {
-                    ErrorView(message: viewModel.errorMessage, action: refresh)
-                        .transition(transition)
+                    ErrorView(message: viewModel.errorMessage, action: viewModel.refresh)
                 } else if viewModel.state == .cities {
                     CitiesView()
-                        .transition(transition)
                 }
             }
+            .transition(transition)
             .navigationBarTitle("Nibble Weather", displayMode: .large)
             .navigationBarItems(
                 leading: refreshButton,
-                trailing: MainMenuView(action: sort)
+                trailing: MainMenuView(action: viewModel.sort)
             )
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -51,7 +49,7 @@ private extension MainView {
 
 
     var refreshButton: some View {
-        Button(action: refresh) {
+        Button(action: viewModel.refresh) {
             Image(systemName: "arrow.clockwise")
                 .foregroundColor(.blue)
         }
@@ -60,24 +58,8 @@ private extension MainView {
 
 
     func onAppear() {
-        db.getCities(completion: viewModel.getCitiesDone)
-    }
-
-
-    func refresh() {
-        withAnimation {
-            viewModel.state = .loading
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                db.getCities(completion: viewModel.getCitiesDone)
-            }
-        }
-    }
-
-
-    func sort(by sort: Database.Sort) {
-        withAnimation {
-            db.sort(by: sort)
-        }
+        viewModel.add(db: db)
+        viewModel.onAppear()
     }
 }
 
@@ -87,7 +69,7 @@ private extension MainView {
 #if DEBUG
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(Database())
     }
 }
 #endif
