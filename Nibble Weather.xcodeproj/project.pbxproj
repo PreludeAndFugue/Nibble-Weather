@@ -31,6 +31,7 @@
 		4E7C4F4C255C83FC00EAF81F /* City+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */; };
 		4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */; };
 		4E867DF4256499EB00444EA4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4E867DF3256499EB00444EA4 /* SDWebImageSwiftUI */; };
+		4E9418D626812F6100DEEE48 /* Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9418D526812F6100DEEE48 /* Private.swift */; };
 		4EE692B32560191A00BC54C0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B22560191A00BC54C0 /* Array+Extension.swift */; };
 		4EE692B8256029A100BC54C0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692B7256029A100BC54C0 /* MainMenuView.swift */; };
 		4EE692BD256034B400BC54C0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE692BC256034B400BC54C0 /* InfoView.swift */; };
@@ -85,6 +86,7 @@
 		4E7C4F4B255C83FC00EAF81F /* City+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Extension.swift"; sourceTree = "<group>"; };
 		4E7C4F56255C8F4A00EAF81F /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		4E867DEB256498A400444EA4 /* Nibble Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nibble Weather.entitlements"; sourceTree = "<group>"; };
+		4E9418D526812F6100DEEE48 /* Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private.swift; sourceTree = "<group>"; };
 		4EE692B22560191A00BC54C0 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		4EE692B7256029A100BC54C0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		4EE692BC256034B400BC54C0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				4E7C4F11255C6F6800EAF81F /* API.swift */,
 				4E7C4F1B255C74F100EAF81F /* Cities.swift */,
 				4E4991F9255F4E0B00EF11F0 /* Database.swift */,
+				4E9418D526812F6100DEEE48 /* Private.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				4E7C4ED4255C658600EAF81F /* MainView.swift in Sources */,
 				4E7C4F1C255C74F100EAF81F /* Cities.swift in Sources */,
 				4E7C4F44255C804500EAF81F /* Font+Extension.swift in Sources */,
+				4E9418D626812F6100DEEE48 /* Private.swift in Sources */,
 				4E7C4ED2255C658600EAF81F /* Nibble_WeatherApp.swift in Sources */,
 				4E4991FA255F4E0B00EF11F0 /* Database.swift in Sources */,
 				4E7C4F57255C8F4A00EAF81F /* CityViewModel.swift in Sources */,

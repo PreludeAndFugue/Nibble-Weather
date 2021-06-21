@@ -18,7 +18,7 @@ final class API {
     private let scheme = "https"
     private let host = "api.openweathermap.org"
     private let path = "/data/2.5/group"
-    private let apiKey = "895854091244c90dbc93c7346189b4d6"
+    private let apiKey = Private.apiKey
     private let locations: [Int] = [
         // lisbon
         2267057,
