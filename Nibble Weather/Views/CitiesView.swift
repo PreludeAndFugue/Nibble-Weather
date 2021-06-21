@@ -43,7 +43,6 @@ private extension CitiesView {
 
 
     func columnCount(width: CGFloat) -> Int {
-        print(hSizeClass, width)
         switch hSizeClass {
         case .compact:
             return width > 720 ? 2 : 1
