@@ -25,9 +25,9 @@ final class API {
         // cumbernauld
         2651715,
         // gornji milanovac
-        790367,
+//        790367,
         // bath
-        2656173,
+//        2656173,
         // barcelona
         3128760
     ]
